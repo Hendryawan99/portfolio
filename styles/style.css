@@ -1,0 +1,536 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+:root {
+  --primaryTextColor: #232e35;
+  --secondaryTextColor: #656d72;
+
+  --borderColor: #f1f1f1;
+  --lineColor: #d9d9d9;
+
+  --primaryBGColor: #ffffff;
+  --secondaryBGColor: #fbfbfb;
+  --thirdBGColor: #f3f3f3;
+
+  --primaryIconColor: #003049;
+  --primaryIconColorHover: #004f6d;
+
+  --sectionPadding: 6rem 0;
+
+  --itemBorderRadius: 0.7rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6, strong {
+  color: var(--primaryTextColor);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.9rem;
+}
+
+p, 
+span, 
+label, 
+input, 
+textarea, 
+li {
+  color: var(--secondaryTextColor);
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  width: 100%;
+  background-color: white;
+  z-index: 999;
+}
+
+header.scrolled {
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+}
+
+.main-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-container {
+    width: 90%;
+  }
+}
+
+/* Buttons */
+.btn {
+  width: 120px;
+  height: 45px;
+  padding: auto;
+  background: var(--primaryIconColor);
+  border: none; 
+  cursor: pointer;
+  transition: .2s ease-in-out;
+  font-family: "Open Sans";
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 3px;
+  color: var(--secondaryBGColor);
+}
+
+.btn:hover {
+  background-color: var(--primaryIconColorHover);
+  transform: translateY(-2px); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Titles */
+.section-title {
+  margin: 1rem 0 4rem;
+  font-size: 2rem;
+}
+
+.pre-title {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: var(--secondaryTextColor);
+  position: relative;
+  padding-left: 40px;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.pre-title::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: var(--lineColor);
+  position: absolute;
+  display: block;
+  left: 0;
+}
+
+/* Layout */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+/* Logo and Navigaton Menu */
+.nav {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0; 
+}
+
+
+.nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  gap: 3rem; 
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.logo a {
+  color: var(--primaryTextColor);
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  color: var(--primaryTextColor)
+}
+
+.nav ul li a:hover {
+  color: var(--primaryIconColor);
+  transition: 0.1s ease-in-out;
+}
+
+
+/* Burger */
+.burger div {
+  width: 25px;
+  height: 2px;
+  background-color: #000;
+  margin: 7px;
+  transition: all 0.3s;
+  z-index: 99;
+}
+
+.burger {
+  display: none;
+  z-index: 99;
+  position: fixed;
+  top: 22px;
+  right: 35px;
+}
+
+/* hero section */
+#hero {
+  width: 100%; 
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  align-items: center;
+  gap: 2rem;
+  padding: var(--sectionPadding);
+  margin-top: 6rem;
+}
+
+.profile-photo {
+  width: 360px; 
+  height: auto;
+  justify-self: end; 
+  margin-left: 20px;  
+  display: block;
+  border: 5px solid var(--primaryIconColor); 
+  border-radius: 50%; 
+  object-fit: cover;
+}
+
+.hero-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+}
+
+.hero-name span {
+  color: #b69121;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-right img {
+  width: 75%;
+}
+
+.social-media {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-btn {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.social-icon {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-btn:hover .social-icon {
+  transform: scale(1.2);
+}
+
+.social-btn svg {
+  transition: transform 0.2s ease-in-out, fill 0.2s ease-in-out;
+}
+
+.social-btn svg:hover {
+  fill: var(--primaryIconColorHover);
+  transform: scale(1.1);
+}
+
+
+/* Services Section */
+#services {
+  background-color: var(--secondaryBGColor);
+  padding: var(--sectionPadding)
+
+}
+
+.services .pre-title {
+  margin: 0 auto;
+}
+
+.services-title {
+  text-align: center;
+}
+
+.service {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: var(--primaryBGColor);
+  border-radius: var(--itemBorderRadius);
+}
+
+.service h4 {
+  margin: 1.5rem 0;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.service-icon{
+  background: var(--thirdBGColor);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 1.3rem;
+  border-radius: 0.5rem;
+}
+
+.service-icon svg {
+  fill: var(--primaryIconColor);
+}
+
+/* Portfolio Section */
+#portfolios {
+  padding: var(--sectionPadding);
+}
+
+.portfolio {
+  border-radius: var(--itemBorderRadius);
+  overflow: hidden;
+  border: 1px solid var(--borderColor); 
+}
+
+.portfolio-cover {
+  height: 200px;
+}
+
+.portfolio-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-info {
+  padding: 2rem 1.5rem;
+}
+
+.portfolio-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.portfolio h4 {
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.portfolio-title a svg:hover {
+  fill: var(--primaryIconColorHover)
+}
+
+.portfolio-title a svg {
+  transition: .2s ease-in-out;
+}
+
+.portfolio-tags {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.portfolio-tags div {
+  font-size: .9rem;
+  border: 1px solid var(--borderColor);
+  padding: .4rem 1rem;
+  color: var(--secondaryTextColor); 
+}
+
+/* Skills and Education */
+#skills {
+  padding: var(--sectionPadding);
+  background: var(--secondaryBGColor);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+}
+
+.education {
+  display: flex;
+  gap: 2rem;
+}
+
+.education .line {
+  padding: 0 .7rem;
+}
+
+.education .line div {
+  width: 2px;
+  height: 100%;
+  background: var(--borderColor);
+  position: relative;
+} 
+
+.education-info p {
+  margin: .6rem 0 1.4rem;
+}
+
+.education-years {
+  margin-bottom: 3rem;
+}
+
+/* The Dot on Line */
+.education .line div:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: var(--borderColor);
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1.5rem;
+}
+
+.skills-right ul {
+  line-height: 2rem;
+  padding: 0 1rem;
+}
+
+/* Contact Section */
+#contact {
+  padding: var(--sectionPadding);
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+}
+
+.contact-form div {
+  margin-bottom: 1.4rem;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  font-family: "Open Sans", sans-serif;
+  background: var(--secondaryBGColor);
+  border: 1px solid var(--borderColor);
+  border-radius: 3px;
+  resize: none;
+}
+
+.contact-form input::placeholder, 
+.contact-form textarea::placeholder {
+  color: #9d9fa1;
+} 
+
+.contac-form input:focus,
+.contac-form textarea:focus {
+  outline: none;
+  border: 1px solid #7d7d7d;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  background-color: var(--primaryIconColor);
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+  font-family: "Open Sans";
+  font-size: 0.8rem;
+  font-weight: 400;
+  
+}
+
+.btn-submit:hover {
+  background: var(--primaryIconColorHover);
+  transform: translateY(-2px); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.contact-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-icon-item {
+  background-color: var(--thirdBGColor);
+  width: 53px;
+  height: 53px;
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-icon-item svg {
+  fill: var(--primaryIconColor);
+}
+
+.contact-item-detail h4 {
+  margin-bottom: 0.6rem;
+}
+
+/* Footer Section */
+footer {
+  padding: 4rem;
+  background: var(--secondaryBGColor);
+  text-align: center;
+}
+
+.footer-icons {
+  margin-bottom: 1rem;
+}
+
+.footer-icons a {
+  margin: 0 .5rem;
+}
+
+.footer-icons svg {
+  fill: #3e3f40;
+}
+
+.footer-icons a:hover {
+  fill: #000;
+}
+
