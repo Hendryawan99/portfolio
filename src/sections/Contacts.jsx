@@ -233,7 +233,9 @@ export const Contacts = () => {
                         {item.label}
                       </div>
 
-                      <div className="font-medium break-all">{item.value}</div>
+                      <div className="font-medium break-all text-[11px] sm:text-base">
+                        {item.value}
+                      </div>
                     </div>
                   </a>
                 ))}
