@@ -10,12 +10,12 @@ import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import { cv_link } from "@/config/cv";
 
 const skills = [
-  "Microsoft Excel",
   "SQL",
   "Python",
   "Tableau",
   "Power BI",
-  "Looker Studio",
+  "Microsoft Excel",
+  "Data Studio",
   "BigQuery",
   "Data Visualization",
   "Statistical Analysis",
@@ -178,13 +178,15 @@ export const Hero = () => {
             What I Work With
           </p>
           <div className="relative overflow-hidden">
-            <div className="flex animate-marquee">
+            {/* Fade kiri */}
+            <div className="absolute left-0 top-0 h-full w-10 bg-linear-to-r from-background to-transparent z-10 pointer-events-none" />
+            {/* Fade kanan */}
+            <div className="absolute right-0 top-0 h-full w-10 bg-linear-to-l from-background to-transparent z-10 pointer-events-none" />
+
+            <div className="flex animate-marquee w-max">
               {[...skills, ...skills].map((skill, idx) => (
                 <div key={idx} className="shrink-0 px-8 py-4">
-                  <span
-                    className="text-2xl font-bold text-muted-foreground/50 
-                                hover:text-muted-foreground hover:scale-105 transition-colors cursor-default"
-                  >
+                  <span className="text-2xl font-bold text-muted-foreground/50 hover:text-muted-foreground transition-colors cursor-default">
                     {skill}
                   </span>
                 </div>
