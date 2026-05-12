@@ -139,10 +139,10 @@ export const Hero = () => {
                   </div>
                 </div>
                 {/* Stats Badge */}
-                <div className="absolute -top-4 -left-4 bg-background rounded-xl px-4 py-2 animate-float animation-delay-500">
+                {/* <div className="absolute -top-4 -left-4 bg-background rounded-xl px-4 py-2 animate-float animation-delay-500">
                   <div className="text-2xl font-bold text-primary">1+</div>
                   <div className="text-default">Years Experience</div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
