@@ -128,7 +128,7 @@ export const Hero = () => {
                 <img
                   src="/profile-img.jpg"
                   alt="Hendryawan Cipta Mulia"
-                  className="w-full aspect-4/5 object-cover rounded-2xl"
+                  className="w-full object-[center_5%] aspect-4/5 object-cover rounded-2xl"
                 />
 
                 {/* Floating Badge */}
