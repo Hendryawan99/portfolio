@@ -245,16 +245,16 @@ export const Contacts = () => {
             {/* Availability Card */}
             <div className="glass rounded-3xl p-8 border">
               <div className="flex items-center gap-3 mb-4">
-                <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                <span className="w-3 h-3 bg-blue-500 rounded-full animate-pulse" />
 
-                <span className="font-medium">Currently Available</span>
+                <span className="font-medium">Currently Employed</span>
               </div>
 
-              <p className="text-muted-foreground text-sm">
+              {/* <p className="text-muted-foreground text-sm">
                 Open to full-time junior data analyst roles and freelance data
                 projects. If you have data that needs making sense of, let's
                 talk!
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

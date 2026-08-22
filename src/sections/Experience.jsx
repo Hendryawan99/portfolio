@@ -1,12 +1,25 @@
 const experiences = [
   {
+    period: "Aug 2026 - Present",
+    role: "Product Information Staff",
+    company: "PT Monotaro Indonesia",
+    description: "",
+    technologies: [
+      "Microsoft Excel",
+      "Google Sheets",
+      "Looker Studio",
+      "Python",
+    ],
+    current: true,
+  },
+  {
     period: "Feb 2025 - Jul 2025",
     role: "Data Scientist",
     company: "PT Menara Indonesia",
     description:
       "Contributed to 3 deliverables at PT Menara Indonesia's AI & Data Science division — a Looker Studio customer profile dashboard built with Python to inform UI/UX team decisions, a structured variable research document for an AI credit scoring model, and a beginner-friendly AI Agent slide.",
     technologies: ["Python", "Looker Studio", "Google Sheets"],
-    current: true,
+    current: false,
   },
   {
     period: "Jan 2025 - Feb 2025",
